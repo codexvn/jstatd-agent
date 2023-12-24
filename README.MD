@@ -16,5 +16,8 @@ jstatd -J-Djava.security.policy=jstatd.all.policy -J-javaagent:jstatd-agent.jar=
 ### 注意
 1. `remoteHostPort`是必填参数
 2. `jstatd.all.policy`文件是jstatd的安全策略文件,需要加上
-3. `remoteHostPort`指定得端口在映射的时候需要保证src和dest端口一致,但是`-p`指定的端口不需要一致
-> 如上述脚本中的`-p 1099`和`remoteHostPort=1100`,在映射的时候需要保证`1100:1100`,但是`1099`不需要
+3. `remoteHostPort`指定得端口在映射的时候需要保证src和dest端口一致,但是`-p`指定的端口不需要一致.
+如上述脚本中的`-p 1099`和`remoteHostPort=1100`,在映射的时候需要保证`1100:1100`,但是`1099`不需要
+
+### 参考
+https://github.com/anthony-o/ejstatd

@@ -8,7 +8,8 @@ VisualVM需要使用jstatd来连接远程的JVM,jstatd提供了一个`-p`的参�
 1. 将`jstatd-agent.jar`放到容器内
 2. 启动jsatd,假设使用的端口是1099和1100,一个通过`-p`参数指定,一个通过`remoteHostPort`指定
 ```shell
-jstatd -J-Djava.security.policy=jstatd.all.policy -J-javaagent:jstatd-agent.jar=remoteHostPort=1100 -J-Djava.rmi.server.hostname=0.0.0.0 -p 1099
+jstatd -J-Djava.security.policy=jstatd.all.policy -J-javaagent:jstatd-agent.jar=remoteHostPort=1100 -J-Djava.rmi.server.hostname=x.x.x.x -p 1099
+x.x.x.x指服务器IP
 ```
 3. 使用VisualVM连接到jstatd
 4. ![](./visualvm.jpg)
